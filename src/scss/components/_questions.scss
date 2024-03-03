@@ -1,0 +1,129 @@
+.questions {
+  padding-top: 120px;
+
+  @include small-tablet {
+    padding-top: 60px;
+  }
+
+  &__content {
+    display: grid;
+    gap: 40px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
+
+    @include mobile {
+      gap: 12px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    transition: all .3s ease-in-out;
+
+    @include small-tablet {
+      padding: 10px;
+    }
+
+    &--beige.questions__box--active {
+      background-color: #FFF6ED;
+    }
+
+    &--green.questions__box--active {
+      background-color: #A4D9C1;
+    }
+
+    &--orange.questions__box--active {
+      background-color: #EB8149;
+    }
+
+    &--brown.questions__box--active {
+      background-color: #B47B44;
+    }
+  }
+
+  &__svg {
+    width: 12px;
+    height: 2px;
+    margin-right: 14px;
+    background-color: #151515;
+    position: relative;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 2px;
+      background-color: #151515;
+      top: 0;
+      left: 0;
+      transform: rotate(90deg);
+      transition: .3s ease-in-out;
+    }
+
+    &__active {
+      &::before {
+        -webkit-transform: rotate(0);
+        -ms-transform: rotate(0);
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    color: #222;
+    font-family: "Actay", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    margin-top: 0px;
+    margin: 0;
+    color: #000;
+    font-family: "Actay", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: all .3s ease-in-out;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    &--active {
+      margin-top: 20px;
+      visibility: visible;
+      opacity: 1;
+
+      @include mobile {
+        margin-top: 10px;
+      }
+    }
+  }
+}

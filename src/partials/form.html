@@ -1,0 +1,49 @@
+<section class="form" id="form">
+  <div class="container">
+    <h2 class="section-title">Сколько зарабатывают наши модели?</h2>
+    <div class="form__content">
+      <picture>
+        <source srcset="img/form.avif" type="image/avif">
+        <source srcset="img/form.webp" type="image/webp">
+        <img loading="lazy" src="img/form.png" class="image" width="500" height="680" alt="form">
+      </picture>
+      <form action="#" class="form__form">
+        <div class="form__wrapper">
+          <label for="day" class="form__label">
+            Дней в неделю
+          </label>
+          <select class="form__input" name="day" id="day">
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+
+          <label for="lvl" class="form__label">
+            Уровень английского
+          </label>
+          <select class="form__input" name="lvl" id="lvl">
+            <option value="начальный">начальный</option>
+            <option value="средний">средний</option>
+            <option value="продвинутый">продвинутый</option>
+          </select>
+          <label for="time" class="form__label">
+            Доход за
+          </label>
+          <select class="form__input" name="time" id="time">
+            <option value="неделю">неделю</option>
+            <option value="месяц">месяц</option>
+            <option value="год">год</option>
+          </select>
+          <p class="form__price">
+            32000 <span class="form__price--mini">₽</span>
+          </p>
+          <p class="form__text">
+            Посчитано на основе реальной статистики доходов наших моделей за последний год
+          </p>
+        </div>
+
+        <button type="button" class="btn-reset btn form__btn" data-graph-path="modal">отправить анкету</button>
+      </form>
+    </div>
+  </div>
+</section>

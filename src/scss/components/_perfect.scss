@@ -1,0 +1,69 @@
+.perfect {
+  padding-top: 120px;
+
+  @include small-tablet {
+    padding-top: 60px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__text {
+    padding: 18px 24px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    max-width: 470px;
+    color: #000;
+    font-family: "Actay", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 50px;
+    border: 1px solid #000;
+
+    @include small-tablet {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &--orange {
+      padding: 16px;
+      margin-top: 62px;
+      margin-bottom: 30px;
+      color: var(--dark);
+      font-size: 24px;
+      border-radius: 40px;
+      border: 1px solid #222;
+      background: #EB8149;
+
+      @include small-tablet {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background: #A4D9C1;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      width: 100%;
+      max-width: 470px;
+    }
+  }
+}

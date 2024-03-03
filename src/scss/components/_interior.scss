@@ -1,0 +1,138 @@
+.interior {
+  padding-top: 120px;
+
+  @include small-tablet {
+    padding-top: 60px;
+  }
+
+  &__swiper {
+    position: relative;
+    padding-top: 110px !important;
+    padding-bottom: 130px !important;
+
+    @include small-tablet {
+      padding: 0 !important;
+      padding-bottom: 40px !important;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    padding-top: 110px !important;
+    padding-bottom: 130px !important;
+
+    @include small-tablet {
+      padding: 0 !important;
+      padding-bottom: 40px !important;
+    }
+  }
+
+  &__arrow-prev {
+    position: absolute;
+    top: calc(50% - 40px);
+    z-index: 5;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__arrow-next {
+    position: absolute;
+    top: calc(50% - 40px);
+    right: 0;
+    z-index: 5;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__pag {
+    position: absolute;
+    text-align: center;
+    bottom: 0 !important;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-btn {}
+}
+
+.tabs {
+  &__nav {
+    padding: 0;
+    margin-bottom: 80px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+
+  &__nav-btn {
+    padding: 16px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    color: #222;
+    font-family: "Actay", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    transition: all .3s ease-in-out;
+
+    @include small-tablet {
+      max-width: 300px;
+      width: 100%;
+      font-size: 18px;
+
+      &:first-child {
+        margin-bottom: 12px;
+      }
+    }
+
+    &--active {
+      background-color: #EB8149 !important;
+    }
+
+    &:focus {
+      background-color: #EB8149;
+      color: #222;
+    }
+
+    &:first-child {
+      margin-right: 20px;
+
+      @include small-tablet {
+        margin-right: 0px;
+      }
+    }
+  }
+
+  &__content {
+    transition: all .3s ease-in-out;
+  }
+
+  &__panel {
+    transition: all .3s ease-in-out;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 16px !important;
+  height: 16px !important;
+  background-color: #FFF;
+  border: 1px solid #000;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0A645A;
+  border-color: #0A645A;
+}

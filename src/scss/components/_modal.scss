@@ -1,0 +1,111 @@
+.graph-modal {
+  &__container {
+    max-width: 705px;
+    padding: 50px;
+    border-radius: 40px;
+    background: #FFF;
+
+    @include small-tablet {
+      padding: 30px;
+    }
+
+    @include mobile {
+      padding: 30px 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 473px;
+    width: 100%;
+  }
+
+  &__input {
+    padding: 16px;
+    margin-bottom: 28px;
+    color: #222;
+    font-family: "Actay", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 40px;
+    border: 1px solid #222;
+    background: #FFF6ED;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &:nth-child(4) {
+      color: #8E8E8E;
+      appearance: none;
+      background-image: url(../img/arrow.svg);
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+
+
+
+    &::placeholder {
+      color: #8E8E8E;
+    }
+  }
+
+  &__text {
+    max-width: 590px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #222;
+    text-align: center;
+    font-family: "Actay Wide", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #A4D9C1;
+  }
+
+  &__tel {
+    &--error {
+      border: red;
+      color: red;
+    }
+  }
+}
+
+
+
+.just-validate-error-field {
+  border-color: red;
+  color: red;
+}
+
+.just-validate-error-label {
+  font-size: 0;
+}

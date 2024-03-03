@@ -1,0 +1,108 @@
+.hero {
+  background-image: url(../img/hero-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 720px;
+
+  @include small-tablet {
+    min-height: 920px;
+    background-size: 900px 468px;
+  }
+
+  @include mobile {
+    margin-bottom: 150px;
+    min-height: 468px;
+    background-size: cover;
+    background-image: url(../img/hero-bg-mobile.webp);
+  }
+
+
+  &__content {
+    padding: 35px 41px 35px 24px;
+    position: relative;
+    margin: 0 auto;
+    margin-right: 0;
+    top: 167px;
+    max-width: 570px;
+    border-radius: 35px;
+    background: #FFF6ED;
+
+    @include small-tablet {
+      top: 317px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/decor-5.svg);
+      width: 285px;
+      height: 211px;
+      bottom: -170px;
+      right: 0;
+      transform: rotate(330deg);
+
+      @include mobile {
+        background-image: url(../img/decor-8-mobile.svg);
+        width: 90px;
+        height: 136px;
+        bottom: -80px;
+        right: 0px;
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    color: var(--dark);
+    font-family: "Actay Wide", sans-serif;
+    font-size: 44px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include small-tablet {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    &--two {
+      margin-bottom: 38px;
+      padding-right: 40px;
+      position: relative;
+      text-align: right;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -35px;
+        right: 20px;
+        width: 381px;
+        height: 118px;
+        background-image: url(../img/title-bg.svg);
+
+        @include mobile {
+          background-image: url(../img/title-bg-mobile.svg);
+          width: 185px;
+          height: 59px;
+          top: -20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    background: #A4D9C1;
+  }
+
+
+}

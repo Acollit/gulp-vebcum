@@ -1,0 +1,215 @@
+.more {
+  padding-top: 120px;
+  margin-bottom: 170px;
+
+  @include small-tablet {
+    padding-top: 60px;
+    margin-bottom: 90px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    &--two {
+      justify-content: center;
+      margin-left: 80px;
+
+      @include small-tablet {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+
+        align-items: flex-start;
+
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 473px;
+    width: 100%;
+    margin-bottom: 120px;
+
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__input {
+    padding: 16px;
+    margin-bottom: 28px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    background: #FFF6ED;
+    color: #222;
+    font-family: Actay;
+    font-size: 20px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: #A4D9C1;
+
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 50px;
+    align-items: end;
+
+    @include small-tablet {
+      margin-top: 0;
+    }
+
+    &--two {
+      margin-top: 10px;
+      justify-content: center;
+      align-items: flex-end;
+      max-width: 400px;
+
+      @include small-tablet {
+        position: relative;
+        margin-top: 50px;
+        align-items: flex-start;
+        left: -35px;
+      }
+
+
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-image: url(../img/decor-5.svg);
+        width: 285px;
+        height: 211px;
+        right: -180px;
+        bottom: -60px;
+
+        @include mobile {
+          background-image: url(../img/decor-5-mobile.svg);
+
+          width: 117px;
+          height: 142px;
+          right: 0px;
+          bottom: 30px;
+        }
+      }
+    }
+
+    &--one {
+      @include small-tablet {
+        margin-bottom: 115px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../img/decor-6.svg);
+        width: 318px;
+        height: 171px;
+        left: 80px;
+        top: -30px;
+
+        @include mobile {
+          background-image: url(../img/decor-6-mobile.svg);
+          position: absolute;
+          width: 154px;
+          height: 85px;
+          left: 20px;
+          top: 15px;
+        }
+
+      }
+    }
+
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 225px;
+    color: #222;
+    text-align: center;
+    font-family: "Actay Wide", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+    @include small-tablet {
+      font-size: 18px;
+    }
+
+  }
+
+  &__tel {
+    padding: 16px 24px;
+    margin-right: 20px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    background: #FFF6ED;
+    color: #222;
+    font-family: "Actay Wide", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+  }
+
+  &__wat {
+    padding: 16px 24px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    background: #A4D9C1;
+    color: #222;
+    font-family: "Actay Wide", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    @include small-tablet {
+
+      font-size: 18px;
+    }
+  }
+
+  &__box {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

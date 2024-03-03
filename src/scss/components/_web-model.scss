@@ -1,0 +1,75 @@
+.web-model {
+  padding-top: 120px;
+  margin-bottom: 100px;
+
+  @include small-tablet {
+    padding-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    padding: 16px;
+    margin: 0;
+    color: #222;
+    font-family: "Actay", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 40px;
+    border: 1px solid #222;
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-right: 20px;
+
+      @include small-tablet {
+        margin-right: 0;
+      }
+
+    }
+
+    @include small-tablet {
+      padding: 12px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &--orange {
+      background-color: #EB8149;
+    }
+
+    &--green {
+      background-color: #A4D9C1;
+    }
+
+    &--beige {
+      background-color: #FFF6ED;
+    }
+
+    &--pink {
+      background-color: #F9E6F1;
+    }
+  }
+}

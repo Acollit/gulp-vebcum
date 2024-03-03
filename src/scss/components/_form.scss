@@ -1,0 +1,131 @@
+.form {
+  padding-top: 120px;
+  @include small-tablet {
+    padding-top: 60px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/decor-7.svg);
+      width: 212px;
+      height: 133px;
+      bottom: 80px;
+      left: -170px;
+
+      @include small-tablet {
+        display:  none;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #000;
+    background: #A4D9C1;
+
+    @include mobile {
+      margin-top: 20px;
+      padding: 40px 20px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    color: #000;
+    font-family: "Actay", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    padding: 16px;
+    margin-bottom: 22px;
+    border-radius: 40px;
+    border: 1px solid #222;
+    background: #FFF;
+    color: #222;
+    font-family: "Actay", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    appearance: none;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    margin-bottom: 22px;
+    color: #000;
+    font-family: "Actay", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+
+    &--mini {
+      font-size: 16px;
+      @include small-tablet {
+        font-size: 14px;
+      }
+    }
+
+    @include small-tablet  {
+      font-size: 18px;
+    }
+
+  }
+
+  &__text {
+    margin: 0;
+    color: #000;
+    font-family: "Actay", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+
+    @include small-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    margin-top: 36px;
+    background-color: #A4D9C1;
+    font-size: 20px;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+}
